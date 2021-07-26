@@ -1,0 +1,19 @@
+<div class="container">
+    <h4>NgClass Demo</h4>
+    <hr>
+    <button class="primary" (click)="toggleTextColor = !toggleTextColor">Toggle Text Color</button>
+    <br><br>
+    <div [ngClass]="toggleTextColor ? 'success' : 'danger'">This is ngClass styled text.</div>
+</div>
+<br><br><br>    
+<div class="container">
+    <h4>NgStyle Demo</h4>
+    <hr>
+    <div [ngStyle]="{color: 'white', 'font-family': 'Courier', 'background-color': 'blue'}">This text is decorated using ngStyle directive</div>
+</div>
+<br><br><br>    
+<div class="container">
+    <h4>NgNonBindable Demo</h4>
+    <hr>
+    <div ngNonBindable>This text can display the Angular tags without compiling by Angular using NgNonBindable tag. {{ Angular Expresssion }}</div>
+</div>

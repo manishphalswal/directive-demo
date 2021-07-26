@@ -1,0 +1,20 @@
+<div class="container">
+    <h4>Custom Attribute Directive Demo</h4>
+    <input type="text" value="dummytext" [changeCase]="'lower'">
+</div>
+<hr>
+<div class="container">
+    <h4>Custom Structural Directive Demo</h4>
+    <input type="text" [(ngModel)]="age">
+    <div *ageLimit="age" [ngStyle]="{color: 'red'}">
+        Please enter a valid age less than or equal to 20
+    </div>
+    <!-- <div *ngIf="true">
+        This will show using *ngIf
+    </div>
+
+    <ng-template [ngIf]="true">
+        This will show using [ngIf] but is similar to *ngIf
+    </ng-template> -->
+
+</div>

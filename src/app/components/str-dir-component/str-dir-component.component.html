@@ -1,0 +1,47 @@
+<div class="container">
+    <h4>NgIf and NgFor Demo</h4>
+    <br>
+    <button class="btn-primary" (click)="toggleVisibility = !toggleVisibility">Toggle List Visibility</button>
+    <hr>
+    <ul class="list-group" *ngIf="toggleVisibility">
+        <li class="list-group-item"
+        *ngFor="let message of messages; let i=index;"
+        >
+        {{ message}} at index: {{ i }}
+    </li>
+    </ul>
+</div>
+<br><br><br><br>
+<div class="container">
+    <h4>NgSwitch Demo</h4>
+    <br>
+    <input type="text" name="alertType" id="alertType" [(ngModel)]="alertType">
+    <br><br>
+    <div [ngSwitch]="alertType">
+        <div *ngSwitchCase="'alert-primary'" class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+        <div *ngSwitchCase="'alert-secondary'" class="alert alert-secondary" role="alert">
+            A simple secondary alert—check it out!
+        </div>
+        <div *ngSwitchCase="'alert-success'" class="alert alert-success" role="alert">
+            A simple success alert—check it out!
+        </div>
+        <div *ngSwitchCase="'alert-danger'" class="alert alert-danger" role="alert">
+            A simple danger alert—check it out!
+        </div>
+        <div *ngSwitchCase="'alert-warning'" class="alert alert-warning" role="alert">
+            A simple warning alert—check it out!
+        </div>
+        <div *ngSwitchCase="'alert-info'" class="alert alert-info" role="alert">
+            A simple info alert—check it out!
+        </div>
+        <div *ngSwitchCase="'alert-light'" class="alert alert-light" role="alert">
+            A simple light alert—check it out!
+        </div>
+        <div *ngSwitchCase="'alert-dark'" class="alert alert-dark" role="alert">
+            A simple dark alert—check it out!
+        </div>
+        <div *ngSwitchDefault>This is default alert without style!</div>
+    </div>
+</div>
